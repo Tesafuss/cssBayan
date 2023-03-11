@@ -1,33 +1,103 @@
+@font-face {
+  font-family: 'Lato';
+  src: url("./assets/fonts/Lato-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("./assets/fonts/Lato-Black.ttf");
+  font-weight: 900;
+}
+
+.heading {
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 3em;
+  line-height: 1em;
+  color: #242121;
+  padding-top: 1em;
+  margin-bottom: 1.5em;
+}
+
+.meme__title {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 0.2em;
+  color: #242121;
+}
+
 * {
   margin: 0;
   padding: 0;
+  transition: 1s;
 }
 
 .container {
   margin: 0 auto;
-  width: 80vw;
+  width: 90vw;
+  box-sizing: border-box;
+  padding: 1.5em;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: rgb(92, 139, 153);
 }
 
-.meme__input {
+.meme {
+  margin: 0 auto; 
+  width: 90%;
+  margin-bottom: 1%;
+  border-top: solid salmon;
+  border-bottom: solid salmon;
+}
+
+.meme__radio {
   display: none;
 }
 
-.meme__title{
-  display: block;
-  width: 100%;
-  padding: 1.5em;
+.meme__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
+  padding: 2em 2em 1em 2em;
 }
 
-.meme__img{
-  height: 0;
+.meme__svg {
+  width: 0;
+}
+
+.meme__img {
+  width: 0;
   overflow: hidden;
+  transition: 1s;
 }
 
-.meme__input:checked + .meme__title + .meme__img{
-  height: 394px;
-  margin-top: -5px;
+.meme__radio:checked + .meme__label > .meme__main > .meme__img {
+  width: 450px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  transition: 1s;
+}
+.meme__radio:checked + .meme__label > .meme__head > .meme__svg {
+  width: 2em;
+  transform: rotate(90deg);
+  transition: 1s;
+}
+
+.meme:hover > .meme__label > .meme__main > .meme__img {
+  width: 450px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  transition: 1s;
+}
+
+.container:hover > .meme > .meme__label > .meme__head > .meme__svg {
+  width: 2em;
+}
+
+.container:hover > .meme > .meme__label > .meme__head > .meme__title {
+  font-size: 1.7em;
+  color: #e29e66;
   transition: 1s;
 }
