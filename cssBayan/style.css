@@ -26,7 +26,8 @@
   overflow: hidden;
 }
 
-.meme__input:checked + label + .meme__img{
+.meme__input:checked + .meme__title + .meme__img{
   height: 394px;
   margin-top: -5px;
+  transition: 1s;
 }
