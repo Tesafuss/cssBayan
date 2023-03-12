@@ -133,6 +133,37 @@
 }
 
 @media (min-width: 320px) and (max-width: 1050px) {
+  .heading {
+    font-size: 1.5em;
+    line-height: 0.75em;
+    margin-bottom: 0.5em;
+  }
+
+  .meme__title {
+    font-size: 0.8em;
+    line-height: 0.15em;
+  }
+
+  .meme__main {
+    margin-top: -2.5%;
+  }
+
+  .meme__head {
+    padding: 0.5% 0.5% 0.5% 0.5%;
+  }
+
+  .container:hover > .meme > .meme__label > .meme__head > .meme__title {
+    font-size: 0.9em;
+  }
+
+  .meme__radio:checked + .meme__label > .meme__head > .meme__title {
+    font-size: 0.95em;
+  }
+
+  .container:hover > .meme > .meme__label > .meme__head > .meme__svg {
+    width: 1.2em;
+  }
+
   .meme__radio:checked + .meme__label > .meme__main > .meme__img {
     width: 90%;
   }
@@ -146,7 +177,7 @@
   .heading {
     font-size: 1.2em;
     line-height: 0.5em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.1em;
   }
 
   .meme__title {
@@ -156,10 +187,6 @@
 
   .meme__main {
     margin-top: -6.5%;
-  }
-
-  .meme__head {
-    padding: 0.5% 0.5% 0.5% 0.5%;
   }
 
   .container:hover > .meme > .meme__label > .meme__head > .meme__title {
